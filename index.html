@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For The Record.</title>
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<script src="script.js" async></script>
+</head>
+<body>
+	<header id="header">
+		<div id="logo">
+			<h1>[ For The Record. ]</h1>
+		</div>
+		<div id="mainNavigation">
+			<nav>
+				<ul>
+					<li><a href="#aboutUs">About Us</a></li>
+					<li><a href="#spotlight">Album Spotlight</a></li>
+					<li><a href="#throwbacks">Throwbacks</a></li>
+					<li><a href="#game">Guessing Game</a></li>
+					<li><a href="#contactUs">Contact Us</a></li>
+					<li><button onclick="darkModeBody()"><svg id="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+						<path fill="currentColor" d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"/></svg>
+					</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="aboutUs">
+			<h2>About Us</h2>
+			<p>Over <span class="orangeText">7,000 vinyl records</span> from numerous musical artists across various decades and genres.</p>
+			<a href="#">Shop Our Collection</a>
+		</section>
+
+		<section id="spotlight">
+			<h2>Album Spotlight</h2>
+
+			<div id="spotlightWrapper">
+				<div id="spotlightImage">
+					<img src="images/theVelvetRope.jpg" alt="Up-close photograph of singer Janet Jackson's face obscured by strands of her curly hair.">
+				</div>
+
+				<div id="spotlightContent">
+					<h3>The Velvet Rope <span class="artistName">Janet Jackson</span></h3>
+					<p>This week we're spotlighting Janet Jackson's 1997 album, <span class="stylizedText">The Velvet Rope</span>, which is set to celebrate its 25th anniversary on October 7th. 
+					Conceived from Janet's own experience with depression, the album's 22 tracks explore themes of loneliness, loss, sexuality, and self-worth, and
+					it is largely cited as her most personable and introspective work to date. Aside from hits like <span class="stylizedText">Together Again</span> and <span class="stylizedText">I Get Lonely</span>,
+					album highlights include <span class="stylizedText">Got Til' It's Gone</span>, a trip-hop record featuring Q-tip and an infectious sample of Joni Mitchell's <span class="stylizedText">Big Yellow Taxi</span>, 
+					and  <span class="stylizedText">Go Deep</span>, a funky dance record that'll "keep you up all night until the early light."</p>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="throwbacks">
+			<h2>Throwbacks</h2>
+			<div id="throwbacksWrapper">
+
+				<div id="throwbacksButtons">
+					<ul>
+						<li><button onclick="georgeDisplay()">80's</button></li>
+						<li><button onclick="mariahDisplay()">90's</button></li>
+						<li><button onclick="amyDisplay()">00's</button></li>
+					</ul>
+				</div>
+
+				<div id="throwbacksContent">
+					<h3 id="displayHeading">Faith <span class="artistName">George Michael</span></h3>
+					<p id="displayInfo">Throwback to October 30th, 1987 when George Michael, released his first studio album, <span class="stylizedText">Faith</span>, since departing from the pop-duo <span class="stylizedText">Wham!</span>
+						and becoming a solo act. The debut album would go on to sell over 25 million copies internationally, solidifying it as one of the best selling albums of all time.<br>
+						<span class="grayText">Genres : Pop / Pop-rock / Soul</span></p>
+				</div>
+				
+				<div id="throwbacksImage">
+					<img id="displayImage" src="images/faith.jpg" alt="Photograph of singer George Michael wearing a black leather jacket and a single gold crucifix earing.">
+				</div>
+
+			</div>
+		</section>
+
+		<section id="game">
+			<h2>Guessing Game ?</h2>
+			<p> We're thinking of a number between 1 and 10,<br> guess correctly and you might just <span class="stylizedText">win 10% off your next purchase!</span></p>
+			<div>
+				<input id="gameNumber" type="number" min="1" max="10">
+				<input id="gameSubmit" type="submit" onclick="guessingGame()">
+			</div>
+			<p id="gameMessage"></p>
+		</section>
+
+		<section id="contactUs">
+			<div id="contactWrapper">
+				<div id="contactInfo">
+					<h2>Contact Us</h2>
+					<p>Can't seem to find the record you're looking for? Just wanna say "hello"?<br>
+					Whatever it may be, we'd love to hear from you!</p>
+				</div>
+				<div id="contactForm">
+					<form id="form">
+						<label for="firstName">First Name <span class="requiredStar">*</span></label>
+						<input type="text" id="firstName" name="firstName">
+						
+						<p id="firstNameError" class="orangeText"></p>
+		
+						<label for="lastName">Last Name <span class="requiredStar">*</span></label>
+						<input type="text" id="lastName" name="lastName" >
+						
+						<p id="lastNameError" class="orangeText"></p>
+
+						<label for="email">Email <span class="requiredStar">*</span></label>
+						<input type="email" id="email" name="email" >
+						
+						<p id="emailError" class="orangeText"></p>
+		
+						<label for="phoneNumber">Phone Number <span class="requiredStar">*</span></label>
+						<input type="tel" id="phoneNumber" name="phoneNumber" >
+						
+						<p id="phoneNumberError" class="orangeText"></p>
+		
+						<fieldset>
+							<legend>Preferred Method of Contact <span class="requiredStar">*</span></legend>
+		
+							<input type="radio" id="preferEmail" name="preferMethod">
+							<label for="preferEmail">Email</label>
+		
+							<input type="radio" id="preferPhone" name="preferMethod">
+							<label for="preferPhone">Phone</label>
+						</fieldset>
+
+						<p id="methodError" class="orangeText"></p>
+		
+						<label for="message">Leave A Message <span class="requiredStar">*</span></label>
+						<textarea id="message" name="message"></textarea>
+						<p id="messageError" class="orangeText"></p>
+		
+						<input id="contactSubmit" type="submit" onclick="validateForm()">
+						<p id="validSubmitMessage" class="orangeText"></p>
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer id="footer">
+		<small>Copyright &copy;2022 ForTheRecord</small>
+	</footer>
+</body>
+</html>

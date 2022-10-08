@@ -1,0 +1,337 @@
+/*--- Nicholas Salemi ---*/
+
+/*--- Start of CSS RESET ---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--- End of CSS RESET ---*/
+
+/*--- ROOT VARIABLES ---*/
+:root {
+    font-size: 16px;
+    --gray:#5f5f5f;
+    --medium-gray:#313231;
+    --dark-gray: #1D1E1E;
+    --off-white:#FEFFFF;
+    --white:#EDEDED;
+    --velvet-red: #8A413E;
+    --cherry-red: #A12821;
+    --sunflower: #C8B05F;
+    --dark-orange:#DB8E36; 
+    --dark-blue: #273664;
+}
+/*--- Start of STYLES ---*/
+body {
+    background-color: var(--white);
+}
+/*--- DARK MODE STYLES ---*/
+.darkBody {
+    background-color: var(--dark-gray);
+    color: var(--white)
+}
+.darkHeader, .darkFooter {
+    background-color: var(--medium-gray);
+}
+.darkGameText {
+    color: black;
+}
+
+/*--- TEXT STYLES ---*/
+p {
+    font-family: "Montserrat", helvetica, sans-serif;
+    line-height: 2rem;
+}
+.stylizedText {
+    font-style: italic;
+}
+.grayText {
+    color: var(--gray);
+}
+.boldText {
+    font-weight: 600;
+}
+.artistName {
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-orange);
+}
+
+a {
+    text-decoration: none;
+    font-family: "Montserrat", helvetica, sans-serif;
+    color: var(--gray);
+}
+a:hover {
+    color: var(--dark-orange);
+    text-decoration: underline;
+}
+
+/*--- HEADER ---*/
+header {
+    background-color: var(--off-white);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 2.25rem 2rem;
+}
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+}
+/*--- BUTTON ---*/
+button {
+    border: none;
+    background-color: transparent;
+    padding: .25rem .25rem;
+}
+button:hover{
+    cursor: pointer;
+}
+#icon{
+    color: var(--gray);
+}
+#icon:hover{
+    color: var(--dark-orange);
+}
+
+/*--- HEADINGS ---*/
+h1 {
+    font-family: Baskerville, Georgia, serif;
+    font-size: 3.25rem;
+    text-transform: lowercase;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--dark-orange);
+    min-width: 360px;
+}
+
+h2 {
+    font-family: Baskerville, Georgia, serif;
+    font-size: 3rem;
+    text-transform: lowercase;
+    padding: 1.75rem 2rem;
+}
+
+h3 {
+    font-family: Baskerville, Georgia, serif;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+/*--- IMAGES ---*/
+img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0,0,0,25%);
+}
+
+/*--- ABOUT US ---*/
+#aboutUs {
+    padding: 10rem 2rem;
+    align-items: center;
+    text-align: center;
+}
+#aboutUs h2, #game h2, #contactUs h2 {
+    padding-bottom: .75rem;
+}
+#aboutUs p{
+    padding-bottom: 1rem;
+}
+
+
+/*--- SPOTLIGHT ---*/
+#spotlight {
+    background-color: var(--velvet-red);
+    padding: 0rem 2rem 5rem 2rem;
+}
+#spotlightContent {
+    min-width: 455px;
+    padding: 0 1rem;
+}
+#spotlightWrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+/*--- THROWBACKS ---*/
+#throwbacks {
+    padding: 0rem 2rem 5rem 2rem;
+}
+#throwbacksWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+#throwbacksButtons ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+#throwbacksContent {
+    align-items: center;
+    border-left: 2px solid rgba(0,0,0,25%);
+    padding: 1rem 2rem;
+    min-width: 295px;
+}
+#throwbacksButtons button{
+    font-family: Baskerville, Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--gray);
+}
+#throwbacksButtons button:hover{
+    color: var(--dark-orange)
+}
+#throwbacksButtons button:focus{
+    color: var(--dark-orange)
+}
+/*--- GAME ---*/
+#game {
+    background-color: var(--sunflower);
+    padding: 0rem 2rem 2rem 2rem;
+    text-align: center;
+}
+#game div input{
+    margin: .75rem auto;
+    display: block;
+}
+#gameNumber {
+    width: 70px;
+    height: 70px;
+    font-family: Baskerville, Georgia, serif;
+    text-align: center;
+    font-size: 1.75rem;
+}
+#gameSubmit {
+    width: 75px;
+    height: 37px;
+    font-family: "Montserrat", helvetica, sans-serif;
+}
+
+/*--- CONTACT ---*/
+#contactWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    padding: 3rem 2rem;
+}
+#contactInfo p {
+    padding: 0 2rem;
+    min-width: 295px;
+}
+#contactForm {
+    border-left: 2px solid rgba(0,0,0,25%);
+    padding: 0 2rem;
+    min-width: 295px;
+}
+#contactForm label {
+    display: block;
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-weight: 500;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+#contactForm input {
+    width: 50%;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+fieldset {
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    width: 50%;
+}
+fieldset legend, fieldset label{
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-weight: 500;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+fieldset label {
+    font-weight: 300;
+}
+textarea {
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 50%;
+    height: 8rem;
+    resize: none;
+}
+.requiredStar, .orangeText {
+    color: var(--dark-orange);
+}
+/*--- HIDE ERRORS ---*/
+.hide {
+    visibility: hidden;
+}
+
+
+/*--- FOOTER ---*/
+footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: var(--off-white);
+}
+footer small {
+    font-family: "Montserrat", helvetica, sans-serif;
+    font-size: .75rem;
+    color: var(--gray);
+}
